@@ -92,7 +92,13 @@ CREATE TABLE `Product` (
 
 LOCK TABLES `Product` WRITE;
 /*!40000 ALTER TABLE `Product` DISABLE KEYS */;
-INSERT INTO `Product` VALUES (1,'Hat','t','Active'),(2,'Shoes','t','Active'),(3,'Pants','t','Active'),(4,'Shirt','t','InActive'),(5,'Coat','t','InActive');
+INSERT INTO `Product`
+    VALUES
+        (1,'Hat','https://images.pexels.com/photos/1878821/pexels-photo-1878821.jpeg?cs=srgb&dl=pexels-marcus-murphy-1878821.jpg&fm=jpg&h=480&w=640&fit=crop','Active'),
+        (2,'Shoes','https://images.pexels.com/photos/718981/pexels-photo-718981.jpeg?cs=srgb&dl=pexels-aidan-jarrett-718981.jpg&fm=jpg&h=540&w=640&fit=crop','Active'),
+        (3,'Pants','https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?cs=srgb&dl=pexels-mnz-1598507.jpg&fm=jpg&h=540&w=640&fit=crop','Active'),
+        (4,'Shirt','https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?cs=srgb&dl=pexels-david-bartus-297933.jpg&fm=jpg&h=540&w=640&fit=crop','InActive'),
+        (5,'Coat','https://images.pexels.com/photos/3217911/pexels-photo-3217911.jpeg?cs=srgb&dl=pexels-andy-vu-3217911.jpg&fm=jpg&h=540&w=640&fit=crop','InActive');
 /*!40000 ALTER TABLE `Product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
