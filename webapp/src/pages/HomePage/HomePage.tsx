@@ -31,9 +31,9 @@ const HomePage = () => {
 
   const getOrders = async () => {
     setLoadingState(DATA_STATES.waiting);
-    const { orderData, errorOccured } = await getInPipelineData();
+    const { orderData, errorOccurred } = await getInPipelineData();
     setData(orderData);
-    setLoadingState(errorOccured ? DATA_STATES.error : DATA_STATES.loaded);
+    setLoadingState(errorOccurred ? DATA_STATES.error : DATA_STATES.loaded);
   };
 
   const updateOrder = async (order: Order) => {
@@ -86,7 +86,7 @@ const HomePage = () => {
   }, []);
 
   let content;
-  if (loadingState === DATA_STATES.waiting)
+  if (loadingState === DATA_STATES.waiting) {
     content = (
       <div
         className="flex flex-row justify-center w-full pt-4"
@@ -95,7 +95,7 @@ const HomePage = () => {
         <Spinner />
       </div>
     );
-  else if (loadingState === DATA_STATES.loaded) 
+  } else if (loadingState === DATA_STATES.loaded) {
     content = (
       <div
         className="flex flex-row justify-center w-full pt-4"
@@ -123,15 +123,16 @@ const HomePage = () => {
         </DragDropContext>
       </div>
     );
-  else
+  } else {
     content = (
       <div
         className="flex flex-row justify-center w-full pt-4 text-3xl font-bold text-white"
         data-testid="error-container"
       >
-        An error occured fetching the data!
+        An error occurred fetching the data!
       </div>
     );
+  }
 
   return (
     <PageWrapper>
