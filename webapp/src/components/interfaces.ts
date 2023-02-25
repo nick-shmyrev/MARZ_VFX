@@ -7,6 +7,13 @@ export interface Order {
     OrderStatus: string;
 }
 
+export interface Product {
+    ProductID: number;
+    ProductName: string;
+    ProductPhotoURL: string;
+    ProductStatus: 'Active' | 'InActive';
+}
+
 export interface OrderData {
   Queued: Order[],
   InProgress: Order[],
